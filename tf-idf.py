@@ -13,13 +13,13 @@ class TFIDF(object):
         tf_list = []
         idf_dic = defaultdict(int)
         for words in word_list:
-            num = len(words)
+            # num = len(words)
             tf_dic = defaultdict(int)
             for word in words:
                 tf_dic[word] += 1
             for word in tf_dic:
                 idf_dic[word] += 1
-                tf_dic[word] /= num
+                # tf_dic[word] /= num
             tf_list.append(tf_dic)
         return tf_list, idf_dic
 
